@@ -10,9 +10,8 @@ st.title("🩺 Aplikasi Deteksi Penyakit Mata")
 @st.cache_resource
 def load_model():
     try:
-        interpreter = tf.lite.Interpreter(model_path="model/model_katarak.tflite")
-        interpreter.allocate_tensors()
-        return interpreter
+        model = tf.keras.models.load_model("model/model_katarak.h5")
+        return model
     except Exception as e:
         st.error(f"Error memuat model: {e}")
         return None
@@ -34,14 +33,7 @@ if uploaded_file is not None and model is not None:
     img_array = img_to_array(img_resized)
     img_array = np.reshape(img_array, (1, 224, 224, 3))
 
-    # Get model details
-    input_details = model.get_input_details()
-    output_details = model.get_output_details()
-
-    # Prediksi
-    model.set_tensor(input_details[0]['index'], img_array)
-    model.invoke()
-    predictions = model.get_tensor(output_details[0]['index'])
+    predictions = model.predict(img_array)
 
     # Get the class index with the highest predicted probability
     class_index = np.argmax(predictions[0])
