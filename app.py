@@ -107,7 +107,7 @@ if "selected_tab" not in st.session_state:
 tabs = ["Cataract", "Diabetic Retinopathy", "Glaucoma", "Normal"]
 
 # -----------------------------
-# NAVBAR INTERAKTIF (PAKE ST COLUMNS)
+# NAVBAR INTERAKTIF
 # -----------------------------
 cols = st.columns(len(tabs))
 for i, tab in enumerate(tabs):
@@ -125,7 +125,7 @@ for i, tab in enumerate(tabs):
 
 st.write("---")
 # -----------------------------
-# KONTEN PENYAKIT BERDASARKAN TAB
+# KONTEN PENYAKIT
 # -----------------------------
 tab = st.session_state.selected_tab
 
