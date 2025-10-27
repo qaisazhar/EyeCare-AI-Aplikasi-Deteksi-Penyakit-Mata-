@@ -64,3 +64,29 @@ Capstone Project untuk mendeteksi penyakit mata menggunakan kecerdasan buatan. A
 -   **Akurasi**: Dilatih pada dataset gambar mata dengan performa yang baik (lihat notebook untuk detail).
 
 ## Struktur Proyek
+
+## Pelatihan Model
+
+Untuk melatih ulang model atau memahami proses pelatihan:
+
+1.  Buka `Capstone_Project_(deteksi_mata_katarak).ipynb` di Jupyter Notebook atau Google Colab.
+2.  Pastikan dataset tersedia (format yang sama seperti di notebook).
+3.  Jalankan sel-sel secara berurutan untuk preprocessing, pelatihan, dan evaluasi.
+4.  Gunakan `convert_to_tflite.py` untuk mengkonversi model terlatih ke format TFLite.
+
+## Kontribusi
+
+Kontribusi untuk proyek ini sangat diterima! Silakan buat issue atau pull request untuk perbaikan atau fitur baru.
+
+## Lisensi
+
+Proyek ini menggunakan lisensi MIT. Lihat file LICENSE untuk detail lebih lanjut.
+
+## Penulis
+
+-   **Nama**: Qaish shavarya azhar
+-   **Tahun**: 2025
+
+---
+
+**Catatan**: Aplikasi ini hanya untuk tujuan edukasi dan tidak menggantikan diagnosis medis profesional. Selalu konsultasikan dengan dokter mata untuk diagnosis yang akurat.
